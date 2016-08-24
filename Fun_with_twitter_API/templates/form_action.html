@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Proper time to post</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Proper time to tweet</h1>
+            </div>
+	    <div id="content">
+ 
+                 Hello <strong>{{name}}</strong> should tweet on..
+            </div>
+            <table>
+            <tr>
+		<th>Day</th>
+		<th>Time(24 hr format)</th>
+	    </tr>
+	    {% for key, value in result.iteritems() %}
+            <tr>
+            	<th> {{ key }} </th>
+            	<td> {{ value }} </td>
+            </tr>
+           {% endfor %}
+           </table>
+        </div>
+    </body>
+</html>
